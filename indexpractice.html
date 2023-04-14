@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice.css">
+    <script src="https://kit.fontawesome.com/d1410caeb0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <label><i class="fa-brands fa-html5 " style="color: brown;"></i> HTML</label>
+            <textarea name="" id="html-code" onkeyup="run()" cols="60" rows="10" o></textarea>
+
+            <label><i class="fa-brands fa-css3-alt" style="color: #00040a;"></i>CSS</label>
+            <textarea name="" id="css-code"onkeyup="run() "rows="10"></textarea>
+
+        </div>
+        <div class="right">
+            <label ><i class="fa-solid fa-play" style="color: indigo;"></i> OUTPUT</label>
+            
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+    <script>
+
+function run(){
+    let htmlCode = document.getElementById("html-code").value;
+    let cssCode = document.getElementById("css-code").value;
+    let output = document.getElementById("output")
+
+    output.contentDocument.body.innerHTML = htmlCode + "<style>"+cssCode + "</style>";
+    
+}        
+    </script>
+</body>
+</html>
